@@ -15,13 +15,14 @@ public class Main {
         if(offlineMode){
             //read from files
             teams = reader.readRankFile();
+
         }
         else{
             //call ftc events
         }
-        CalculateAdvancement calculateAdvancement = new CalculateAdvancement();
+        AdvancementCalculator advancementCalculator = new AdvancementCalculator();
 
-        List<Advancement> advancement = calculateAdvancement.advancement(teams);
+        List<Advancement> advancement = advancementCalculator.advancement(teams);
 
         for(Advancement team : advancement){
             System.out.println("team: " +team.getTeamNumber() + " " +team.getTeamName() + ", points: " + team.getAdvancementPoints());

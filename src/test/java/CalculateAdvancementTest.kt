@@ -1,6 +1,3 @@
-import model.Team
-import CalculateAdvancement
-
 class CalculateAdvancementTest {
 //    private val calculateAdvancement: CalculateAdvancement = CalculateAdvancement()
 //

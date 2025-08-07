@@ -1,37 +1,9 @@
-import model.*
-import org.apache.commons.math3.special.Erf;
+import model.AllianceModel
+import model.AwardModel
+import model.Team
+import org.apache.commons.math3.special.Erf
 
-
-open class CalculateAdvancement {
-    val reader: OfflineFileReader = OfflineFileReader()
-
-
-
-    open fun advancement(teams:List<Team>) : List<Advancement>{
-        val advancement = mutableListOf<Advancement>()
-
-        //get qual ranking points
-        val competingTeams = teams.filter { !it.rank.isNullOrEmpty() } //since not all teams compete in the robot games
-        calulateQualPointsAllTeams(competingTeams)
-
-        //get alliances
-        val alliances = reader.readAllianceFile()
-        calculateAlliancePoints(teams,alliances)
-
-        //win points
-        val eliminatedAlliances = reader.readEliminationOrder()
-        calculateWinPoints(teams,alliances,eliminatedAlliances)
-
-        //get awards
-        val awards = parseAwardFile("/awards.txt")
-        calculateAwardPoints(teams,awards)
-        //total
-        for( team in teams){
-            team.total = team.qualificationPoints + team.alliancePoints + team.playOffPoints + team.awardPoints
-            advancement.add(Advancement(team.teamName,team.teamNumber,team.total!!))
-        }
-        return advancement.sortedByDescending { it.advancementPoints}
-    }
+class Calculations {
 
     fun calulateQualPointsAllTeams(teams: List<Team>){
         val totalTeams = teams.size
@@ -86,6 +58,4 @@ open class CalculateAdvancement {
             }
         }
     }
-
-
 }
