@@ -20,8 +20,8 @@ open class CalculateAdvancement {
         calculateAlliancePoints(teams,alliances)
 
         //win points
-//        val eliminatedAlliances = reader.readEliminationOrder()
-//        calculateWinPoints(teams,alliances,eliminatedAlliances)
+        val eliminatedAlliances = reader.readEliminationOrder()
+        calculateWinPoints(teams,alliances,eliminatedAlliances)
 
         //get awards
 
@@ -63,7 +63,7 @@ open class CalculateAdvancement {
     fun calculateWinPoints(teams: List<Team>, allianceModels: List<AllianceModel>, eliminatedAlliances: List<Int>){
         val alliancePoints = listOf(40,20,10,5)
         //top 4 teams get points
-        for(i in 0..4){
+        for(i in 0..3){
             //alliances are in eliminated order so winner is listed last
             val allianceNumber = eliminatedAlliances[eliminatedAlliances.size-1-i]
             val alliance = allianceModels.find { it.allianceNumber == allianceNumber.toString() }

@@ -33,3 +33,7 @@ sourceSets {
         }
     }
 }
+
+tasks.withType<ProcessResources> {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}

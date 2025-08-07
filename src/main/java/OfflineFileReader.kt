@@ -35,18 +35,18 @@ open class OfflineFileReader {
         return allianceModels
     }
 
-//    fun readEliminationOrder():List<Int>{
-//        val eliminatedAlliance = mutableListOf<Int>()
-//        val inputStream = object {}.javaClass.getResourceAsStream("/eliminationOrder.txt")
-//        if (inputStream != null) {
-//            inputStream.bufferedReader().useLines { lines ->
-//                lines.forEach {
-//                    eliminatedAlliance.add(it.toInt())
-//                }
-//            }
-//        } else {
-//            println("eliminationOrder.txt not found!")
-//        }
-//        return eliminatedAlliance
-//    }
+    fun readEliminationOrder():List<Int>{
+        val eliminatedAlliance = mutableListOf<Int>()
+        val inputStream = object {}.javaClass.getResourceAsStream("/eliminationOrder.txt")
+        if (inputStream != null) {
+            inputStream.bufferedReader().useLines { lines ->
+                lines.forEach {
+                    eliminatedAlliance.add(it.toInt())
+                }
+            }
+        } else {
+            println("eliminationOrder.txt not found!")
+        }
+        return eliminatedAlliance
+    }
 }
