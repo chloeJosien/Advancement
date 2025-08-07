@@ -1,0 +1,24 @@
+1, 3747, The Hive
+2, 20515, Cube Ets
+3, 8641, The Masters
+4, 26630, Chaos Squared
+5, 10695, Minerva
+6, 8400, Perfect Paradox
+7, 16028, Mecha Knights
+8, 10533, OHMS Velocity Raptors
+9, 26482, ASAP
+10, 25678, Disconnect
+11, 5667, RoboMiners
+12, 19922, Iron Lions
+13, 12351, Aviators
+14, 17603, Nuclear Core
+15, 19389, Angry Aliens
+16, 26583, NASA
+17, 17230, Aluminum Falcons
+18, 17604, TNT
+19, 15749, OHMS Baconators
+20, 16091, TWCA
+21, 21676, Traffic Cone Pigeon Girls
+22, 28285, Buy-N-Large
+23, 12515, Raptor Racers
+24, 16748, Rowland Hall Monochromats

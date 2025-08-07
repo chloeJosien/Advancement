@@ -1,0 +1,6 @@
+inspire1, 3747
+inspire2, 8400
+inspire3, 8641
+firstPlace, 16028, 26482, 5667, 17230, 20515, 16091, 25678
+secondPlace, 19389
+thirdPlace,
