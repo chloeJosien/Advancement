@@ -7,6 +7,6 @@ data class Team(
     var qualificationPoints: Int = 2,
     var alliancePoints: Int = 0,
     var playOffPoints: Int = 0,
-    val awardPoints: Int = 0,
+    var awardPoints: Int = 0,
     var total: Int? = 0
 )

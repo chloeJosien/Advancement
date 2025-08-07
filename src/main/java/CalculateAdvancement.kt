@@ -1,11 +1,10 @@
-import model.Advancement
-import model.AllianceModel
-import model.Team
+import model.*
 import org.apache.commons.math3.special.Erf;
 
 
 open class CalculateAdvancement {
     val reader: OfflineFileReader = OfflineFileReader()
+
 
 
     open fun advancement(teams:List<Team>) : List<Advancement>{
@@ -24,7 +23,8 @@ open class CalculateAdvancement {
         calculateWinPoints(teams,alliances,eliminatedAlliances)
 
         //get awards
-
+        val awards = parseAwardFile("/awards.txt")
+        calculateAwardPoints(teams,awards)
         //total
         for( team in teams){
             team.total = team.qualificationPoints + team.alliancePoints + team.playOffPoints + team.awardPoints
@@ -70,6 +70,20 @@ open class CalculateAdvancement {
 
             teams.find { it.teamNumber == alliance?.captain }?.playOffPoints = alliancePoints[i]
             teams.find { it.teamNumber == alliance?.firstPick }?.playOffPoints = alliancePoints[i]
+        }
+    }
+
+    fun calculateAwardPoints(teams: List<Team>, awards: AwardModel){
+        teams.find { it.teamNumber == awards.inspire1 }?.awardPoints = 60;
+        teams.find { it.teamNumber == awards.inspire2 }?.awardPoints = 30;
+        teams.find { it.teamNumber == awards.inspire3 }?.awardPoints = 15;
+
+        val awardPointsMap = listOf(awards.firstPlace to 12, awards.secondPlace to 6, awards.thirdPlace to 3)
+
+        for ((teamNumbers, points) in awardPointsMap) {
+            for (teamNumber in teamNumbers) {
+                teams.find { it.teamNumber == teamNumber }?.awardPoints = points
+            }
         }
     }
 
