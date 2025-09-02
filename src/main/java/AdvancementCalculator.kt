@@ -4,6 +4,16 @@ open class AdvancementCalculator {
     private val reader: OfflineFileReader = OfflineFileReader()
     private val calculations: Calculations = Calculations()
 
+    open fun liveAdvancement(inputEventData: EventData):List<Advancement> {
+        val awards = AwardModel(inspire1 = inputEventData.inspire1,
+            inspire2 = inputEventData.inspire2,
+            inspire3 = inputEventData.inspire3,
+            firstPlace = inputEventData.firstPlace,
+            secondPlace = inputEventData.secondPlace,
+            thirdPlace = inputEventData.thirdPlace)
+        return advancement(inputEventData.ranking, inputEventData.alliances, inputEventData.eliminations, awards)
+    }
+
     open fun manualAdvancement(rankFilePath: String, allianceFilePath: String, eliminationOrderFilePath: String, awardFilePath: String): List<Advancement>{
         //read in all the files
         val teams = reader.readRankFile(rankFilePath)
