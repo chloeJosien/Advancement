@@ -3,9 +3,9 @@ import model.Team
 
 open class OfflineFileReader {
 
-     fun readRankFile(): List<Team>{
+     fun readRankFile(fileName: String): List<Team>{
         val teams = mutableListOf<Team>()
-        val inputStream = object {}.javaClass.getResourceAsStream("/rank.txt")
+        val inputStream = object {}.javaClass.getResourceAsStream(fileName)
         if (inputStream != null) {
             inputStream.bufferedReader().useLines { lines ->
                 lines.forEach {
@@ -14,14 +14,14 @@ open class OfflineFileReader {
                 }
             }
         } else {
-            println("rank.txt not found!")
+            println(fileName+ " not found!")
         }
         return teams
     }
 
-    fun readAllianceFile():List<AllianceModel>{
+    fun readAllianceFile(fileName: String):List<AllianceModel>{
         val allianceModels = mutableListOf<AllianceModel>()
-        val inputStream = object {}.javaClass.getResourceAsStream("/alliances.txt")
+        val inputStream = object {}.javaClass.getResourceAsStream(fileName)
         if (inputStream != null) {
             inputStream.bufferedReader().useLines { lines ->
                 lines.forEach {
@@ -30,14 +30,14 @@ open class OfflineFileReader {
                 }
             }
         } else {
-            println("alliances.txt not found!")
+            println(fileName+ " not found!")
         }
         return allianceModels
     }
 
-    fun readEliminationOrder():List<Int>{
+    fun readEliminationOrder(fileName: String):List<Int>{
         val eliminatedAlliance = mutableListOf<Int>()
-        val inputStream = object {}.javaClass.getResourceAsStream("/eliminationOrder.txt")
+        val inputStream = object {}.javaClass.getResourceAsStream(fileName)
         if (inputStream != null) {
             inputStream.bufferedReader().useLines { lines ->
                 lines.forEach {
@@ -45,7 +45,7 @@ open class OfflineFileReader {
                 }
             }
         } else {
-            println("eliminationOrder.txt not found!")
+            println(fileName+ " not found!")
         }
         return eliminatedAlliance
     }

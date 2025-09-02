@@ -1,17 +1,20 @@
 import model.*
-import org.apache.commons.math3.special.Erf;
-
 
 open class AdvancementCalculator {
-    val reader: OfflineFileReader = OfflineFileReader()
-    val calculations: Calculations = Calculations()
-    //easy update for offline workings
-    val allianceFilePath: String = "/alliances.txt"
-    val eliminationOrderFilePath: String = "/eliminationOrder.txt"
-    val awardFilePath : String ="/awards.txt"
+    private val reader: OfflineFileReader = OfflineFileReader()
+    private val calculations: Calculations = Calculations()
 
+    open fun manualAdvancement(rankFilePath: String, allianceFilePath: String, eliminationOrderFilePath: String, awardFilePath: String): List<Advancement>{
+        //read in all the files
+        val teams = reader.readRankFile(rankFilePath)
+        val alliances = reader.readAllianceFile(allianceFilePath)
+        val eliminatedAlliances = reader.readEliminationOrder(eliminationOrderFilePath)
+        val awards = parseAwardFile(awardFilePath)
 
-    open fun advancement(teams:List<Team>) : List<Advancement>{
+        return advancement(teams, alliances, eliminatedAlliances, awards)
+    }
+
+    private fun advancement(teams:List<Team>, alliances: List<AllianceModel>, eliminatedAlliances: List<Int>, awards: AwardModel) : List<Advancement>{
         val advancement = mutableListOf<Advancement>()
 
         //get qual ranking points
@@ -19,15 +22,12 @@ open class AdvancementCalculator {
         calculations.calulateQualPointsAllTeams(competingTeams)
 
         //get alliances
-        val alliances = reader.readAllianceFile()
         calculations.calculateAlliancePoints(teams,alliances)
 
         //win points
-        val eliminatedAlliances = reader.readEliminationOrder()
         calculations.calculateWinPoints(teams,alliances,eliminatedAlliances)
 
         //get awards
-        val awards = parseAwardFile(awardFilePath)
         calculations.calculateAwardPoints(teams,awards)
         //total
         for( team in teams){

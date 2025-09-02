@@ -26,3 +26,8 @@ ThymeLeaf:
 For this project since the FTC team I work with does not begin competing
 until early December, I'm choosing to build this UI in React as also to teach myself
 more front-end focused languages. If this needed to be done quickly I would have chosen ThymeLeaf.
+
+
+**Things to test/ improvements to make** 
+* what happens if a team competes for awards but not robot games
+* fix tests
