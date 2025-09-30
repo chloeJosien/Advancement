@@ -12,10 +12,10 @@ public class ManualController {
     private static final String rankFilePath = "/rank.txt";
     private static final String allianceFilePath= "/alliances.txt";
     private static final String eliminationOrderFilePath= "/eliminationOrder.txt";
-    private static final String awardFilePath ="/awards.txt";
+    private static final String awardFilePath = "/awards.txt";
 
     public static void main(String[] args) {
-        AdvancementCalculator advancementCalculator = new AdvancementCalculator();
+        AdvancementService advancementCalculator = new AdvancementService();
 
         List<Advancement> advancement = advancementCalculator.manualAdvancement(rankFilePath, allianceFilePath,eliminationOrderFilePath,awardFilePath);
 

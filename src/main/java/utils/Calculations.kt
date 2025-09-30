@@ -1,3 +1,5 @@
+package utils
+
 import model.AllianceModel
 import model.AwardModel
 import model.Team

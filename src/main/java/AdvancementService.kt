@@ -1,8 +1,14 @@
 import model.*
+import utils.Calculations
+import utils.OfflineFileReader
 
-open class AdvancementCalculator {
+open class AdvancementService {
     private val reader: OfflineFileReader = OfflineFileReader()
     private val calculations: Calculations = Calculations()
+
+    open fun getRankings(eventCode: String, year: String){
+
+    }
 
     open fun liveAdvancement(inputEventData: EventData):List<Advancement> {
         val awards = AwardModel(inspire1 = inputEventData.inspire1,
