@@ -1,0 +1,27 @@
+,5026, Tesla Coils
+,8400, Perfect Paradox
+,8641, The Masters
+,11002, Die Toaster, Die!
+,15413, Toaster Medics
+,16028, Mecha Knights
+,17230, Aluminum Falcons
+,19389, Angry Aliens
+,19922, Iron Lions
+,20515, Cubed ETs
+,21676, Gelatinous Cubed
+,21895, Töster Strüüüüüdel
+,25976, Techno Knights
+,26630, Chaos²
+,30534, Odyssey Rovers
+,31143, Rogue Robotics
+,31683, Euclid's Engineers
+,31834, Unhatched Plans
+,31835, Oh Beehave
+,32068, MajesTech
+,32069, Jurassic Toast
+,32070, Hunka Hunka Burnin' Toast
+,32071, Toastbusters
+,32072, Pacific Toast Highway
+,32272, Eagle Works
+,33441, Gravediggers
+,33748, Wait on our Shoulders

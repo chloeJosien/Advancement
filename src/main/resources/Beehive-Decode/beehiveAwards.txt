@@ -1,0 +1,6 @@
+inspire1,
+inspire2,
+inspire3,
+firstPlace,
+secondPlace,
+thirdPlace,
