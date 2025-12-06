@@ -10,10 +10,10 @@ users will then need to update the file path that they want to use.
 public class ManualController {
     //easy update for offline workings
     //Beehive - Decode
-    private static final String rankFilePath = "/Beehive-Decode/beehiveRank.txt";
-    private static final String allianceFilePath= "/Beehive-Decode/beehiveAlliances.txt";
-    private static final String eliminationOrderFilePath= "/Beehive-Decode/beehiveElim.txt";
-    private static final String awardFilePath = "/Beehive-Decode/beehiveAwards.txt";
+    private static final String rankFilePath = "/beehiveRank.txt";
+    private static final String allianceFilePath= "/beehiveAlliances.txt";
+    private static final String eliminationOrderFilePath= "/beehiveElim.txt";
+    private static final String awardFilePath = "/beehiveAwards.txt";
 
     //Utah Champs- into the deep
 //    private static final String rankFilePath = "/rank.txt";

@@ -41,7 +41,9 @@ open class AdvancementService {
         calculations.calculateAlliancePoints(teams,alliances)
 
         //win points
-        calculations.calculateWinPoints(teams,alliances,eliminatedAlliances)
+        if(alliances.isNotEmpty() && eliminatedAlliances.isNotEmpty()) {
+            calculations.calculateWinPoints(teams, alliances, eliminatedAlliances)
+        }
 
         //get awards
         calculations.calculateAwardPoints(teams,awards)

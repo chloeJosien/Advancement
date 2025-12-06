@@ -1,0 +1,21 @@
+1,19389, Angry Aliens
+2,31835, Oh Beehave
+3,5026, Tesla Coils
+4,17230, Aluminum Falcons
+5,33441, Gravediggers
+6,19922, Iron Lions
+7,25976, Techno Knights
+8,31143, Rogue Robotics
+9,33748, Wait on our Shoulders
+10,16028, Mecha Knights
+11 ,8400, Perfect Paradox
+12,30534, Odyssey Rovers
+13,8641, The Masters
+14,20515, Cubed ETs
+15,21676, Gelatinous Cubed
+16,31834, Unhatched Plans
+17,32068, MajesTech
+18,32272, Eagle Works
+19,31683, Euclid's Engineers
+20,26630, Chaos²
+21,32071, Toastbusters
