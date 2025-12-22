@@ -1,6 +1,6 @@
-inspire1,
-inspire2,
-inspire3,
-firstPlace,
-secondPlace,
+inspire1, 17230
+inspire2, 8400
+inspire3, 19922
+firstPlace, 31834, 33748, 16028, 26630, 20515, 33441, 19389, 5026
+secondPlace, 8641
 thirdPlace,
